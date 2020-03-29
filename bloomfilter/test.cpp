@@ -21,7 +21,6 @@ string random_string(int len){
     return output_string;
 }
 
-
 int main(){
     int n_false_positives = 0;
     int n_inserted_strings = 300;
@@ -30,7 +29,7 @@ int main(){
 
     vector<string> test_strings_in;
     vector<string> test_strings_not_in;
-    Bloomfilter test_filter(1000000, 200);
+    Bloomfilter test_filter(1000000, 2000);
 
     // Generate random strings for the bloom filter.
     for(int idx=0; idx<n_inserted_strings; ++idx){

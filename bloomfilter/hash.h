@@ -9,7 +9,7 @@
 using namespace std;
 
 // Specialising the Murmur3 hash function to be used based on c++ strings.
-unsigned int string_hash(string to_hash, unsigned int seed);
+uint64_t string_hash(string to_hash, unsigned int seed, uint64_t bin_size);
 
 // Creating a class for hash functions with a random seed.
 class RandomHash{
@@ -22,7 +22,7 @@ class RandomHash{
 
         // return the hash value based on the input string.
         // hash value is computed using 128 bit murmurhash3 based on the internal seed value.
-        unsigned int hash(string input);
+        unsigned long int hash(string input);
 
     private:
         unsigned int seed;
